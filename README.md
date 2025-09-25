@@ -72,7 +72,7 @@ Khác với API service, project này được thiết kế cho **browser intera
 </form>
 <a href="/login">Login</a>
 ```
-![alt text](image.png)
+![alt text](public/images/image.png)
 ---
 
 ### 2. 📝 Register User (Form Submission)
@@ -94,13 +94,13 @@ Khác với API service, project này được thiết kế cho **browser intera
 - **Status:** 302 Found
 - **Location Header:** `/login`
 - **Body:** Redirecting to `/login`
-![alt text](image-2.png)
+![alt text](public/images/image-2.png)
 
 **Error Response (200 with error message):**
 ```html
 Error: E11000 duplicate key error collection: passportAuth.users index: username_1 dup key: { username: "testuser" }
 ```
-![alt text](image-1.png)
+![alt text](public/images/image-1.png)
 ---
 
 ### 3. 📄 Get Login Page
@@ -119,7 +119,7 @@ Error: E11000 duplicate key error collection: passportAuth.users index: username
 </form>
 <a href="/register">Register</a>
 ```
-![alt text](image-3.png)
+![alt text](public/images/image-3.png)
 ---
 
 ### 4. 🔐 Login User (Form Submission)
@@ -142,13 +142,16 @@ Error: E11000 duplicate key error collection: passportAuth.users index: username
 - **Location Header:** `/profile`
 - **Set-Cookie:** `connect.sid=...`
 
-![alt text](image-4.png)
+![alt text](public/images/image-4.png)
+
+## In MongoDB
+![alt text](public/images/image-9.png)
 
 **Failed Response (302 Redirect to login):**
 - **Status:** 302 Found  
 - **Location Header:** `/login`
 
-![alt text](image-5.png)
+![alt text](public/images/image-5.png)
 ---
 
 ### 5. 👤 Profile Page (Protected)
@@ -163,12 +166,12 @@ Error: E11000 duplicate key error collection: passportAuth.users index: username
 <h2>Welcome testuser</h2>
 <a href="/logout">Logout</a>
 ```
-![alt text](image-6.png)
+![alt text](public/images/image-6.png)
 
 **Failed Response (302 Redirect) - Chưa login:**
 - **Status:** 302 Found
 - **Location Header:** `/login`
-![alt text](image-8.png)
+![alt text](public/images/image-8.png)
 ---
 
 ### 6. 🚪 Logout
@@ -181,7 +184,7 @@ Error: E11000 duplicate key error collection: passportAuth.users index: username
 - **Status:** 302 Found
 - **Location Header:** `/login`
 - **Set-Cookie:** Cookie cleared
-![alt text](image-7.png)
+![alt text](public/images/image-7.png)
 ---
 
 ## 🔄 Complete Web Testing Flow
